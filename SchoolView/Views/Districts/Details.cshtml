@@ -1,0 +1,122 @@
+﻿@model SchoolView.Models.District
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>District</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.organizationType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.organizationType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.streetLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.streetLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.streetLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.streetLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stateProvince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stateProvince)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.county)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.county)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NCESID_district)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NCESID_district)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.code1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.code2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_updated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_updated)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.leaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

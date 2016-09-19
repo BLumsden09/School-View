@@ -1,0 +1,44 @@
+﻿@model SchoolView.Models.DistrictViewModel
+
+
+<h2>My Career Shines - Navigator Database</h2>
+<head>
+    <style type="text/css">
+        textarea {
+            border-style: none; 
+            border-color: Transparent; 
+            overflow: auto;
+                          
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <div>
+            @Html.DropDownListFor(m => m.SelectedDistrict, Model.Districts, "----Select District----")
+        </div>
+        <div>
+            @Html.TextArea("DistrictInformation", new { cols = 60, rows = 10 })
+        </div>
+    </form>
+
+    <script type="text/javascript" src="~/scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        var url = '@Url.Action("GetDistrictInfo", "District")';
+        var info = $('#DistrictInformation');
+        info.hide();
+        $(document).on('change', '#SelectedDistrict', function () {
+            info.val('').empty();          
+            $.getJSON(url, { id: $(this).val() }, function (response) {
+                if (!response) {
+                    return;
+                }
+                info.show();
+                $.each(response, function (item) {
+                    info.append($.text(item.Text).val());
+                });
+            });
+        });
+    </script>
+</body>

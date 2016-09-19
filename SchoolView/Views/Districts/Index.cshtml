@@ -1,0 +1,105 @@
+﻿@model IEnumerable<SchoolView.Models.District>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.organizationType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.streetLine1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.streetLine2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stateProvince)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.county)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NCESID_district)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_updated)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.organizationType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.streetLine1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.streetLine2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stateProvince)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.county)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NCESID_district)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_updated)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.leaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.leaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.leaID })
+        </td>
+    </tr>
+}
+
+</table>
